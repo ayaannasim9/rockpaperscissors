@@ -15,7 +15,7 @@
     font-family: 'Times New Roman', Times, serif;
     font-family: Arial, Helvetica, sans-serif;
 }
-.game{
+.icon-container{
     padding-top: 4vh;
     display: flex;
     height: 20vh;
@@ -38,4 +38,12 @@ img{
     height: 140px;
     width: 140px;
     border-radius: 50%;
+}
+.score-container{
+    display: flex;
+    height: 30vh;
+    align-items: center;
+    justify-content: center;
+    border: solid black;
+    font-size: large;
 }
