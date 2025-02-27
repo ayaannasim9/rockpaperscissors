@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.navbar{
+    display: flex;
+    background-color: #b1c1c0;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
