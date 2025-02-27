@@ -47,3 +47,29 @@ img{
     border: solid black;
     font-size: large;
 }
+#p_score{
+    height: 20vh;
+    width: 10vh;
+    display: flex;
+    flex-direction: column;
+    border: solid black;
+    padding-right: 20px;
+    justify-content: center;
+    text-align: center;
+}
+#c_score{
+    height: 20vh;
+    width: 10vh;
+    display: flex;
+    flex-direction: column;
+    border: solid black;
+    justify-content: center;
+    text-align: center; 
+    padding-left: 20px;  
+}
+.score{
+    font-size: 70px;
+}
+.user{
+    font-size: 30px;
+}
