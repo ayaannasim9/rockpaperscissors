@@ -44,7 +44,7 @@ img{
     height: 30vh;
     align-items: center;
     justify-content: center;
-    border: solid black;
+    /* border: solid black; */
     font-size: large;
 }
 #p_score{
@@ -52,8 +52,8 @@ img{
     width: 10vh;
     display: flex;
     flex-direction: column;
-    border: solid black;
-    padding-right: 20px;
+    /* border: solid black; */
+    padding-right: 25px;
     justify-content: center;
     text-align: center;
 }
@@ -62,10 +62,10 @@ img{
     width: 10vh;
     display: flex;
     flex-direction: column;
-    border: solid black;
+    /* border: solid black; */
     justify-content: center;
     text-align: center; 
-    padding-left: 20px;  
+    padding-left: 25px;  
 }
 .score{
     font-size: 70px;
