@@ -51,5 +51,31 @@ const check=(choice) =>{
         else{
             msg.innerText=`Computer selected paper. It's a draw!`
         }
+    }else if(choice=="rock"){
+        if(comp_choice=="scissor"){
+            player_score++
+            p_score.innerText=player_score
+            msg.innerText=`Computer selected scissor. You Won!`
+        }else if(comp_choice=="paper"){
+            computer_score++
+            c_score.innerText=computer_score
+            msg.innerText=`Computer selected paper. You lost!`
+        }
+        else{
+            msg.innerText=`Computer selected rock. It's a draw!`
+        }
+    }else{
+        if(comp_choice=="paper"){
+            player_score++
+            p_score.innerText=player_score
+            msg.innerText=`Computer selected paper. You Won!`
+        }else if(comp_choice=="rock"){
+            computer_score++
+            c_score.innerText=computer_score
+            msg.innerText=`Computer selected rock. You lost!`
+        }
+        else{
+            msg.innerText=`Computer selected scissor. It's a draw!`
+        }
     }
 }
