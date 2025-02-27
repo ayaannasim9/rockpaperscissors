@@ -73,3 +73,26 @@ img{
 .user{
     font-size: 30px;
 }
+.message-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 20vh;
+    /* border: solid black; */
+    font-size: 25px;
+}
+.message{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: hidden;
+    border-radius: 8px;
+    padding-right: 18px;
+    padding-left: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 5vh;
+    background-color: #cbd081;
+    color: black;
+}
