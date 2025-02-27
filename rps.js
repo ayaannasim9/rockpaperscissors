@@ -12,6 +12,9 @@ computer_score=0
 //accessing message
 let msg=document.querySelector("#msg")
 
+//accessing reset button
+let reset=document.querySelector("#btn")
+
 rock.addEventListener("click",() =>{
     check("rock")
 })
@@ -20,6 +23,13 @@ paper.addEventListener("click",() =>{
 })
 scissor.addEventListener("click",() =>{
     check("scissor")
+})
+
+reset.addEventListener("click",()=>{
+    player_score=0;
+    computer_score=0;
+    p_score.innerText=player_score;
+    c_score.innerText=computer_score
 })
 const generate=()=>{
     cn=(Math.floor(Math.random()*205))%3
