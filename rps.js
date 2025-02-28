@@ -1,18 +1,29 @@
-// accessing input fields
-let noOfRounds=document.querySelector("#rounds")
-let startbutton=document.querySelector("#strt")
-// rounds=noOfRounds.value
-startbutton.addEventListener("click",() =>{
-    let rounds=noOfRounds.value
-    console.log(rounds)
 
-})
-console.log(rounds)
 // accessing game elements
 let rock=document.querySelector("#rock-button")
 let paper=document.querySelector("#paper-button")
 let scissor=document.querySelector("#scissor-button")
 
+// disabling buttons before entry of number of rounds
+rock.disabled = true;
+paper.disabled = true;
+scissor.disabled = true;
+
+// accessing input fields
+let noOfRounds=document.querySelector("#rounds")
+let startbutton=document.querySelector("#strt")
+
+//adding functionality to start button
+let rounds=null
+startbutton.addEventListener("click",() =>{
+    rounds=noOfRounds.value
+    console.log(rounds)
+    rock.disabled=false
+    paper.disabled=false
+    scissor.disabled=false
+    noOfRounds.value=""
+
+})
 // acessing scores
 let p_score=document.querySelector("#player")
 let c_score=document.querySelector("#comp")
