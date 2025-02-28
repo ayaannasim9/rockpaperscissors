@@ -10,6 +10,7 @@
     justify-content: center;
     align-items: center;
     height: 10vh;
+    width: 100%;
 }
 #heading{
     font-family: 'Times New Roman', Times, serif;
@@ -117,11 +118,11 @@ img{
     font-weight: bold;
 }
 /* get rid of the arrow from the input box */
-input[type="number"]::-webkit-inner-spin-button,
+/* input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
+} */
 .round-container{
     border: black solid;
     height: 15vh;
@@ -163,6 +164,12 @@ input[type="number"]::-webkit-outer-spin-button {
     border: hidden;
     border-radius: 50%;
 }
+.icon-button:hover{
+    border: solid black;
+    border-width: 5px;
+}
+    
+    
 /* .hide {
     display: none !important;
 } */
