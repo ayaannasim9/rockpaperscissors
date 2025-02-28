@@ -163,3 +163,6 @@ input[type="number"]::-webkit-outer-spin-button {
     border: hidden;
     border-radius: 50%;
 }
+.hide {
+    display: none !important;
+}
