@@ -21,6 +21,7 @@ let player_score=0
 let computer_score=0
 
 //accessing message
+let msgcontainer=document.querySelector(".message")
 let msg=document.querySelector("#msg")
 
 //accessing reset button
@@ -91,39 +92,57 @@ const check=(choice) =>{
         if(comp_choice=="rock"){
             player_score++
             p_score.innerText=player_score
+            msgcontainer.classList.remove("loss","draw")
+            msgcontainer.classList.add("win")
             msg.innerText=`Computer selected rock. You Won!`
         }else if(comp_choice=="scissor"){
             computer_score++
             c_score.innerText=computer_score
+            msgcontainer.classList.remove("win","draw")
+            msgcontainer.classList.add("loss")
             msg.innerText=`Computer selected scissor. You lost!`
         }
         else{
+            msgcontainer.classList.remove("win","loss")
+            msgcontainer.classList.add("draw")
             msg.innerText=`Computer selected paper. It's a draw!`
         }
     }else if(choice=="rock"){
         if(comp_choice=="scissor"){
             player_score++
             p_score.innerText=player_score
+            msgcontainer.classList.remove("loss","draw")
+            msgcontainer.classList.add("win")
             msg.innerText=`Computer selected scissor. You Won!`
         }else if(comp_choice=="paper"){
             computer_score++
             c_score.innerText=computer_score
+            msgcontainer.classList.remove("win","draw")
+            msgcontainer.classList.add("loss")
             msg.innerText=`Computer selected paper. You lost!`
         }
         else{
+            msgcontainer.classList.remove("win","loss")
+            msgcontainer.classList.add("draw")
             msg.innerText=`Computer selected rock. It's a draw!`
         }
     }else{
         if(comp_choice=="paper"){
             player_score++
             p_score.innerText=player_score
+            msgcontainer.classList.remove("loss","draw")
+            msgcontainer.classList.add("win")
             msg.innerText=`Computer selected paper. You Won!`
         }else if(comp_choice=="rock"){
             computer_score++
             c_score.innerText=computer_score
+            msgcontainer.classList.remove("win","draw")
+            msgcontainer.classList.add("loss")
             msg.innerText=`Computer selected rock. You lost!`
         }
         else{
+            msgcontainer.classList.remove("win","loss")
+            msgcontainer.classList.add("draw")
             msg.innerText=`Computer selected scissor. It's a draw!`
         }
     }
