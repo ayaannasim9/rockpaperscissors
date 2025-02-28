@@ -52,6 +52,12 @@ reset.addEventListener("click",()=>{
     p_score.innerText=player_score;
     c_score.innerText=computer_score
 })
+
+const disableButtons=() =>{
+    rock.disabled=true
+    paper.disabled=true
+    scissor.disabled=true
+}
 const generate=()=>{
     cn=(Math.floor(Math.random()*205))%3
     // console.log(cn)
@@ -66,9 +72,8 @@ const generate=()=>{
 
 
 const check=(choice) =>{
-    // console.log(choice)
     comp_choice=generate()
-    // console.log(comp_choice)
+    rounds--
     if(choice=="paper"){
         if(comp_choice=="rock"){
             player_score++
@@ -108,5 +113,8 @@ const check=(choice) =>{
         else{
             msg.innerText=`Computer selected scissor. It's a draw!`
         }
+    }
+    if(rounds<=0){
+        disableButtons()
     }
 }
