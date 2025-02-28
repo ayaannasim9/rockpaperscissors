@@ -1,7 +1,17 @@
+// accessing input fields
+let noOfRounds=document.querySelector("#rounds")
+let startbutton=document.querySelector("#strt")
+// rounds=noOfRounds.value
+startbutton.addEventListener("click",() =>{
+    let rounds=noOfRounds.value
+    console.log(rounds)
+
+})
+console.log(rounds)
 // accessing game elements
-let rock=document.querySelector("#rock")
-let paper=document.querySelector("#paper")
-let scissor=document.querySelector("#scissors")
+let rock=document.querySelector("#rock-button")
+let paper=document.querySelector("#paper-button")
+let scissor=document.querySelector("#scissor-button")
 
 // acessing scores
 let p_score=document.querySelector("#player")
@@ -13,7 +23,7 @@ computer_score=0
 let msg=document.querySelector("#msg")
 
 //accessing reset button
-let reset=document.querySelector("#btn")
+let reset=document.querySelector("#rst")
 
 rock.addEventListener("click",() =>{
     check("rock")
