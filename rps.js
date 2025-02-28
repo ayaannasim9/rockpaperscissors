@@ -5,14 +5,14 @@ let paper=document.querySelector("#paper-button")
 let scissor=document.querySelector("#scissor-button")
 
 // disabling buttons before entry of number of rounds
-rock.disabled = true;
-paper.disabled = true;
-scissor.disabled = true;
+// rock.disabled = true;
+// paper.disabled = true;
+// scissor.disabled = true;
 
 // accessing input fields
-let noOfRounds=document.querySelector("#rounds")
-let startbutton=document.querySelector("#strt")
-let rounmsg=document.querySelector("#input")
+// let noOfRounds=document.querySelector("#rounds")
+// let startbutton=document.querySelector("#strt")
+// let rounmsg=document.querySelector("#input")
 
 // acessing scores
 let p_score=document.querySelector("#player")
@@ -27,19 +27,16 @@ let msg=document.querySelector("#msg")
 let reset=document.querySelector("#rst")
 //adding functionality to start button
 let rounds=null
-startbutton.addEventListener("click",() =>{
-    rounds=noOfRounds.value
-    console.log(rounds)
-    enableButtons()
-    noOfRounds.value=""
-    startbutton.classList.add("hide")
-    // startbutton.style.display = "none";
-    noOfRounds.classList.add("hide");
-    rounmsg.innerText=`${rounds} rounds left!`
-})
-
-
-
+// startbutton.addEventListener("click",() =>{
+//     rounds=noOfRounds.value
+//     console.log(rounds)
+//     enableButtons()
+//     noOfRounds.value=""
+//     startbutton.classList.add("hide")
+//     noOfRounds.classList.add("hide");
+//     rounmsg.innerText=`${rounds} rounds left!`
+//     msg.innerText="Select Rock/Paper/Scissors"
+// })
 
 
 rock.addEventListener("click",() =>{
@@ -50,14 +47,17 @@ paper.addEventListener("click",() =>{
 })
 scissor.addEventListener("click",() =>{
     check("scissor")
-})
+})    
 
-reset.addEventListener("click",()=>{
+const resetgame=()=>{
     player_score=0;
     computer_score=0;
     p_score.innerText=player_score;
     c_score.innerText=computer_score
-})
+    msg.innerText="Select Rock/Paper/Scissors !"
+}
+reset.addEventListener("click",resetgame)
+
 
 const disableButtons=() =>{
     rock.disabled=true
@@ -85,8 +85,8 @@ const generate=()=>{
 
 const check=(choice) =>{
     comp_choice=generate()
-    rounmsg.innerText=`${rounds} rounds left!`
-    rounds--
+    // rounds--
+    // rounmsg.innerText=`${rounds} rounds left!`
     if(choice=="paper"){
         if(comp_choice=="rock"){
             player_score++
@@ -127,7 +127,19 @@ const check=(choice) =>{
             msg.innerText=`Computer selected scissor. It's a draw!`
         }
     }
-    if(rounds<=0){
-        disableButtons()
-    }
+    // if(rounds<=0){
+    //     startbutton.classList.remove("hide")
+    //     noOfRounds.classList.remove("hide");
+    //     rounmsg.innerText="Enter number of rounds:"
+    //     disableButtons()
+    //     if(player_score>computer_score){
+    //         msg.innerText=`You have ${player_score} points and computer has ${computer_score} points. You Win!`
+    //     }else if(player_score<computer_score){
+    //         msg.innerText=`You have ${player_score} points and computer has ${computer_score} points. You Lose!`
+    //     }
+    //     else{
+    //         msg.innerText=`You have ${player_score} points and computer has ${computer_score} points. It's a Draw!`
+    //     }
+    //     resetgame()
+    // }
 }
