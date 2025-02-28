@@ -166,3 +166,14 @@ input[type="number"]::-webkit-outer-spin-button {
 /* .hide {
     display: none !important;
 } */
+.draw{
+    background-color: #C7D7BD;
+}
+.win{
+    background-color: #CADA98;
+}
+.loss{
+    background-color: #1C2321;
+    background-color: #4D5E61;
+    color: white;
+}
