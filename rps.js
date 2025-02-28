@@ -12,29 +12,35 @@ scissor.disabled = true;
 // accessing input fields
 let noOfRounds=document.querySelector("#rounds")
 let startbutton=document.querySelector("#strt")
+let rounmsg=document.querySelector("#input")
 
-//adding functionality to start button
-let rounds=null
-startbutton.addEventListener("click",() =>{
-    rounds=noOfRounds.value
-    console.log(rounds)
-    rock.disabled=false
-    paper.disabled=false
-    scissor.disabled=false
-    noOfRounds.value=""
-
-})
 // acessing scores
 let p_score=document.querySelector("#player")
 let c_score=document.querySelector("#comp")
-player_score=0
-computer_score=0
+let player_score=0
+let computer_score=0
 
 //accessing message
 let msg=document.querySelector("#msg")
 
 //accessing reset button
 let reset=document.querySelector("#rst")
+//adding functionality to start button
+let rounds=null
+startbutton.addEventListener("click",() =>{
+    rounds=noOfRounds.value
+    console.log(rounds)
+    enableButtons()
+    noOfRounds.value=""
+    startbutton.classList.add("hide")
+    // startbutton.style.display = "none";
+    noOfRounds.classList.add("hide");
+    rounmsg.innerText=`${rounds} rounds left!`
+})
+
+
+
+
 
 rock.addEventListener("click",() =>{
     check("rock")
@@ -58,6 +64,12 @@ const disableButtons=() =>{
     paper.disabled=true
     scissor.disabled=true
 }
+
+const enableButtons=() =>{
+    rock.disabled=false
+    paper.disabled=false
+    scissor.disabled=false
+}
 const generate=()=>{
     cn=(Math.floor(Math.random()*205))%3
     // console.log(cn)
@@ -73,6 +85,7 @@ const generate=()=>{
 
 const check=(choice) =>{
     comp_choice=generate()
+    rounmsg.innerText=`${rounds} rounds left!`
     rounds--
     if(choice=="paper"){
         if(comp_choice=="rock"){
