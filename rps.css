@@ -19,7 +19,7 @@
     padding-top: 4vh;
     display: flex;
     height: 20vh;
-    /* border: black solid; */
+    border: black solid;
     justify-content: center;
     align-items: center;
     /* width: 110px; */
@@ -44,7 +44,7 @@ img{
     height: 30vh;
     align-items: center;
     justify-content: center;
-    /* border: solid black; */
+    border: solid black;
     font-size: large;
 }
 #p_score{
@@ -77,8 +77,8 @@ img{
     display: flex;
     justify-content: center;
     text-align: center;
-    height: 15vh;
-    /* border: solid black; */
+    height: 13vh;
+    border: solid black;
     font-size: 25px;
 }
 .message{
@@ -102,7 +102,7 @@ img{
     display: flex;
     justify-content: center;
 }
-#btn{
+#rst{
     display: flex;
     justify-content: center;
     text-align: center;
@@ -110,6 +110,41 @@ img{
     height:5vh;
     width: 16vh;
     padding: 10px;
+    border: hidden;
+    border-radius: 8px;
+    background-color: #D2E59E;
+    font-size: 15px;
+    font-weight: bold;
+}
+/* get rid of the arrow from the input box */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.round-container{
+    border: black solid;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#rounds{
+    background-color: #B2B783;
+    height: 3vh;
+    border-radius: 8px;
+    border: hidden;
+    width: 20vh;
+}
+#strt{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height:3vh;
+    width: 15vh;
     border: hidden;
     border-radius: 8px;
     background-color: #D2E59E;
